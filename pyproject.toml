@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []  # Empty - we don't build this as a package, just manage dependencies
+
+[project]
+name = "sam3-ultralytics"
+version = "0.1.0"
+description = "Integration of SAM3 and Ultralytics YOLO libraries"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "SAM3-Ultralytics Integration"}
+]
+
+# Note: Local editable dependencies are installed via install.sh
+# This file is primarily for project metadata
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "ruff>=0.1.0",
+]
